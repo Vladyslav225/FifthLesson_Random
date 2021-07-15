@@ -44,8 +44,8 @@ iterationCounter = 0
 
 max_iterationCounter = 0
 
-firstNumber = int(input(": "))
-secondNumber = int(input(": "))
+firstNumber = int(input("Input first number: "))
+secondNumber = int(input("Input second number: "))
 
 
 
@@ -59,12 +59,13 @@ while max_iterationCounter < 1:
     if firstNumber == secondNumber:
         print(round(firstNumber, 2))
         print(round(secondNumber, 2))
-        break
 
+        break
+#Adding a new iteration
     iterationCounter +=1
 
 #Number of iterations
 print("The loop counter", iterationCounter, "times.")
 
 #Calculation of repetition as a perxentage
-print("{0:.2f}%".format(iterationCounter * 1 / 100))
+print("{0:.2f}%".format(1 / iterationCounter * 100))
