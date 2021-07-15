@@ -38,27 +38,33 @@ lists = [
 objects = dict(lists)
 print(objects)
 
+########
 
-loopCounter = 0
+iterationCounter = 0
 
+max_iterationCounter = 0
 
 firstNumber = int(input(": "))
 secondNumber = int(input(": "))
 
-while True:
+
+
+while max_iterationCounter < 1:
 
     firstNumber = random.uniform(firstNumber, secondNumber)
     secondNumber = random.uniform(firstNumber, secondNumber)
 
-    print(round(firstNumber, 2))
-    print(round(secondNumber, 2))
+    print(firstNumber, secondNumber)
 
     if firstNumber == secondNumber:
-        print(firstNumber, secondNumber)
+        print(round(firstNumber, 2))
+        print(round(secondNumber, 2))
         break
 
-    loopCounter +=1
+    iterationCounter +=1
 
-    break
+#Number of iterations
+print("The loop counter", iterationCounter, "times.")
 
-print("The loop counter", loopCounter, "times.")
+#Calculation of repetition as a perxentage
+print("{0:.2f}%".format(iterationCounter * 1 / 100))
