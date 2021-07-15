@@ -4,17 +4,17 @@ evenList = [ ]
 oddList = [ ]
 
 #Random distribution to the list of even and odd numbers
-for i in range(100):
+for valueRandint in range(100):
 
-    value = random.randint(1, 100)
+    valueRandint = random.randint(1, 100)
     # print(value)
 
-    if value % 2 == 0:
-        evenList.append(value)
+    if valueRandint % 2 == 0:
+        evenList.append(valueRandint)
         print(evenList)
 
-    elif not value % 2 == 0:
-        oddList.append(value)
+    elif not valueRandint % 2 == 0:
+        oddList.append(valueRandint)
         print(oddList)
 
 #The sum of the even list
@@ -39,3 +39,27 @@ objects = dict(lists)
 print(objects)
 
 
+loopCounter = 0
+
+while True:
+
+    firstNumber = int(input(": "))
+    secondNumber = int(input(": "))
+
+    while True:
+
+        firstNumber = random.uniform(firstNumber, secondNumber)
+        secondNumber = random.uniform(firstNumber, secondNumber)
+
+        print(round(firstNumber, 2))
+        print(round(secondNumber, 2))
+
+        if firstNumber == secondNumber:
+            print(firstNumber, secondNumber)
+            break
+
+        loopCounter +=1
+
+    break
+
+print("The loop counter", loopCounter, "times.")
