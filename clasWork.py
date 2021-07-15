@@ -41,24 +41,23 @@ print(objects)
 
 loopCounter = 0
 
+
+firstNumber = int(input(": "))
+secondNumber = int(input(": "))
+
 while True:
 
-    firstNumber = int(input(": "))
-    secondNumber = int(input(": "))
+    firstNumber = random.uniform(firstNumber, secondNumber)
+    secondNumber = random.uniform(firstNumber, secondNumber)
 
-    while True:
+    print(round(firstNumber, 2))
+    print(round(secondNumber, 2))
 
-        firstNumber = random.uniform(firstNumber, secondNumber)
-        secondNumber = random.uniform(firstNumber, secondNumber)
+    if firstNumber == secondNumber:
+        print(firstNumber, secondNumber)
+        break
 
-        print(round(firstNumber, 2))
-        print(round(secondNumber, 2))
-
-        if firstNumber == secondNumber:
-            print(firstNumber, secondNumber)
-            break
-
-        loopCounter +=1
+    loopCounter +=1
 
     break
 
